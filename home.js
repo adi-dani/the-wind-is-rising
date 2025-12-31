@@ -145,20 +145,19 @@ setupWindow("messageBtn", "messageWindow");
 
 /* --- PHOTO JOURNAL DATA --- */
 const galleryData = [
-  // { img: "imgs/nahoko.jpg", text: "Greetings! About this website: “The wind is rising! We must try to live.” — Paul Valéry. The year is soon to end, and change comes with it — not only with the new year but with new beginnings and challenges. Nevertheless, I wanted to leave this year behind with my deepest sentiments reaching you. I dedicate this website to you, “just because” of the silly hope that you still remember considering me your first patient. If it’s not otherwise, or if I no longer hold that honor, I wanted you to be the patron of my first website, regardless. I also don’t suppose that you already know, but I wanted to tell you that I've started my journey into the tech field in college... I recently completed the first semester and decided to use this break to self-learn some tech stuff that won’t be taught to us. The buttons above will lead you to either the letter I wrote to you or my photo journal for the coming year. Both are 6-code pin-protected. If the code escapes your memory, try recalling the dates that were important to us back in 2021. I truly hope this doesn’t burden you into appreciating it or navigating its contents, but I wanted everything here to reach you nonetheless." },
-  // { img: "imgs/download.jpg", text: "Entry 2 — rain braided the world into quiet silver threads." },
-  // { img: "gallery/03.jpg", text: "Entry 3 — a window, a table, a thought still warm." },
-  // { img: "gallery/04.jpg", text: "Entry 4 — laughter vanished around the corner, almost staying." },
-  // { img: "gallery/05.jpg", text: "Entry 5 — the street hummed and carried my name gently." },
-  // { img: "gallery/06.jpg", text: "Entry 6 — I kept a promise folded inside my pocket." },
-
-  // extra entries to PROVE scrolling works
-  //{ img: "gallery/07.jpg", text: "Entry 7 — the afternoon lingered like a song refusing to end." },
-  //{ img: "gallery/08.jpg", text: "Entry 8 — shadows stitched the pavement into memory." },
-  //{ img: "gallery/09.jpg", text: "Entry 9 — I watched the light learn how to leave." },
-  //{ img: "gallery/10.jpg", text: "Entry 10 — the wind carried a name it would not say aloud." },
-  //{ img: "gallery/11.jpg", text: "Entry 11 — the city exhaled, and I exhaled with it." },
-  //{ img: "gallery/12.jpg", text: "Entry 12 — somewhere inside it, the day forgave me." }
+  { img: "imgs/photojournals/010126.jpeg", text: [
+    "January 1, 2026",
+    "It's the first day of the year, and I am writing this feeling defeated by my anxieties about what would happen if I finally send her this letter. But KC asked me what I’d prefer. Would I prefer my efforts to stay with me, or would I prefer it to reach its muse, even if she doesn't respond? I think that now, at least, it would reach her. So I will send her this.",
+    "It's 3AM, and just approximately three hours before this, I had the best New Year's celebration ever. This is the first time I spent it outside on the street, on our street. I never go outside the house when the clock hits 12AM of any other year. Because I would always go upstairs to watch the fireworks display. I never thought that watching the streets filled with people would be more enthralling.",
+    "The street was filled with smoke from firecrackers and motorcycles. This is the noisiest on our street, except that one time a fire broke out. People threw coins in the air, and KC’s mom threw chocolate candies, too. Our street was filled with karaoke speakers, and that one humongous sound system that looked like it came from Korea's DMZ, party horn noises, bogas, thundering motorcycle revs, from a specific car, too. A neighbor offered me tequila. I said yes, but retreated the moment I saw lemon slices. Only then do I realize it would make me choke and make my throat burn. Thank heavens, I withdrew. I love living here, I just realized. I almost lost my voice from singing too much at the karaoke, too. I kind of lost some air blowing my party horn. Regardless, I felt happy.",
+    "This is the first time, too, that I celebrated the New Year with KC. I have never been grateful enough for having such a friend who would celebrate with me both Christmas and New Year. Regrettably, though, we couldn’t celebrate the 2025’s Christmas together. Anyway, we spent a few times near the plaza yesterday, and I bought us ice cream. She accompanied me to buy party horns for my siblings. I can only wish we could celebrate with our other friends, too.",
+    "My mom and siblings were with me on the street as well, and I'm content with how they smiled today. I wish this year would bring us together more. I wish to spend the celebrations we’ll have this year feeling genuinely happy.",
+    "Recalling what happened in the first few hours of this year, the thought of this website burdening its muse never escaped me. But as I now write my first entry in my digital photojournal, I fear the next course of action I would take.",
+    "Nevertheless, I wish to have a happy New Year. No matter what.",
+    "If you're reading this:",
+    "Happy New Year! May you enjoy living a healthy life and success. I always wish you the best."
+    ]
+  }
 ];
 
 
@@ -179,7 +178,7 @@ if (gallery) {
 
     img.onclick = () => {
       viewerImage.src = item.img;
-      viewerText.textContent = item.text;
+      viewerText.innerHTML = item.text.map(p => `<p>${p}</p>`).join("");
       viewer.classList.remove("hidden");
     };
 
