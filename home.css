@@ -69,8 +69,7 @@
 
 /* HOME WINDOW */
 #home-container {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 25vh;
   width: 700px;
   height: 350px;
   position: absolute;
@@ -561,4 +560,5 @@
   text-decoration: underline;
   font-family: Verdana, sans-serif;
   font-weight: bold;
+
 }
